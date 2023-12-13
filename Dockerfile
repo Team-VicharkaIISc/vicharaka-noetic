@@ -15,4 +15,5 @@ RUN apt-get install -y --no-install-recommends python3-rosdep
 RUN rosdep init \
  && rosdep fix-permissions \
  && rosdep update
+RUN apt-get install -y build-essential
 RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
